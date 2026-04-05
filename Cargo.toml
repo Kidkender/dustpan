@@ -1,0 +1,13 @@
+[workspace]
+members = [
+    "crates/cleaner-core",
+    "crates/cleaner-cli",
+    "src-tauri",
+]
+resolver = "2"
+
+[profile.release]
+opt-level = "z"
+lto = true
+strip = true
+codegen-units = 1
